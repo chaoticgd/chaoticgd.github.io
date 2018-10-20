@@ -1,0 +1,15 @@
+#cg-header-container {
+	color: #0f0;
+	font-family: Monospace;
+	font-size: 24px;
+	line-height: 64px;
+}
+#cg-header-breadcrumb {
+	color: #0f0;
+}
+#cg-header-background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
