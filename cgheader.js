@@ -1,8 +1,18 @@
 var cg = {};
+
+cg.getScriptDirectory = function() {
+	var scripts = document.getElementsByTagName('script');
+	for(var i in scripts) {
+		if(scripts[i].src.indexOf('cgheader.js') >= 0) {
+			return scripts[i].src.substring(0, scripts[i].src.lastIndexOf('/'));
+		}
+	}
+};
+
 cg.createHeader = function(breadCrumbs) {
 	var headerStyle = document.createElement('link');
 	headerStyle.rel = 'stylesheet';
-	headerStyle.href = 'cgheader.css';
+	headerStyle.href = cg.getScriptDirectory() + '/cgheader.css';
 	document.head.appendChild(headerStyle);
 	
 	var headerElement = document.createElement('div');
