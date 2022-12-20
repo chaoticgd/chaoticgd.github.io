@@ -19,7 +19,7 @@ cg.createHeader = function(breadCrumbs) {
 	headerElement.id = 'cg-header-container';
 	document.body.insertBefore(headerElement, document.body.firstChild);
 
-	breadCrumbs.unshift({ text: 'chaotic.gd', href: '/' });
+	breadCrumbs.unshift({ text: 'chaoticgd.github.io', href: '/' });
 	
 	for(var i in breadCrumbs) {
 		var breadCrumb = breadCrumbs[i];
